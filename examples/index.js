@@ -78,6 +78,12 @@ export default class example extends Component {
             />);
     }
 
+    //当组件接收到新的属性值时被调用
+    componentWillReceiveProps(nextProps) {
+        //让状态跟着属性变化
+        this.setState({isChecked:nextProps.isChecked});
+    }
+
     render() {
         return (
             <View style={styles.container}>
